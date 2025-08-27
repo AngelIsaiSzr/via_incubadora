@@ -1,4 +1,4 @@
-# 🌍 VÍA - Visión, Impacto y Acción | Incubadora de Proyectos
+# 🌍 VÍA - Visión, Impacto y Acción
 
 **VÍA** es una incubadora **gratuita** de proyectos con impacto social.  
 Nuestro objetivo es **acompañar a emprendedores visionarios** que buscan transformar el mundo con **asesorías, mentoría y apoyo técnico sin costo**.  
