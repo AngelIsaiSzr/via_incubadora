@@ -22,24 +22,24 @@
     --border: hsl(210, 15%, 92%);
     --input: hsl(210, 15%, 92%);
     --ring: hsl(190, 85%, 55%);
-    
+
     /* Brand Colors */
     --via-primary: hsl(190, 85%, 55%);
     --via-primary-light: hsl(190, 70%, 70%);
     --via-primary-dark: hsl(190, 90%, 45%);
-    
+
     /* Gradients */
     --via-gradient: linear-gradient(135deg, hsl(190, 85%, 55%), hsl(190, 70%, 70%));
     --via-gradient-hero: linear-gradient(135deg, hsl(190, 90%, 45%), hsl(200, 85%, 60%));
-    
+
     /* Shadows */
     --shadow-soft: 0 4px 20px -2px hsla(190, 85%, 55%, 0.15);
     --shadow-glow: 0 0 40px hsla(190, 85%, 55%, 0.4);
     --shadow-card: 0 8px 32px -8px hsla(218, 18%, 15%, 0.3);
-    
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     /* Border Radius */
     --radius: 0.75rem;
 }
@@ -124,51 +124,76 @@ body {
 
 .mobile-menu-btn {
     display: none;
-    background: none;
     border: none;
-    padding: 0.5rem;
+    background: transparent;
+    padding: 0.4rem;
     cursor: pointer;
-    color: var(--foreground);
+    color: var(--via-primary);
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    align-items: center;
+    justify-content: center;
 }
 
 .hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 28px;
+    height: 20px;
+    box-sizing: content-box;
+}
+
+.hamburger .bar {
     display: block;
-    width: 1.5rem;
-    height: 2px;
-    background: currentColor;
-    position: relative;
-}
-
-.hamburger::before,
-.hamburger::after {
-    content: '';
-    position: absolute;
     width: 100%;
-    height: 2px;
+    height: 3px;
     background: currentColor;
-    transition: var(--transition-smooth);
+    border-radius: 0;
+    transform-origin: center;
+    transition: transform 0.36s cubic-bezier(.2, .9, .2, 1), opacity 0.25s, width 0.28s;
 }
 
-.hamburger::before {
-    top: -6px;
+.mobile-menu-btn.active .hamburger .bar:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
 }
 
-.hamburger::after {
-    bottom: -6px;
+.mobile-menu-btn.active .hamburger .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0.2);
+}
+
+.mobile-menu-btn.active .hamburger .bar:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
 }
 
 .mobile-menu {
-    display: none;
-    padding: 1rem 0;
-    border-top: 1px solid rgba(45, 212, 191, 0.1);
+    display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-12px);
+    transition:
+        max-height 0.45s cubic-bezier(.22, .9, .28, 1),
+        opacity 0.28s ease,
+        transform 0.36s cubic-bezier(.2, .9, .2, 1);
+}
+
+.mobile-menu.active {
+    max-height: 520px;
+    padding: 1rem 0;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .mobile-nav-link {
     color: var(--foreground);
     text-decoration: none;
     transition: var(--transition-smooth);
+    padding: 0.25rem 0.5rem;
 }
 
 .mobile-nav-link:hover {
@@ -179,11 +204,14 @@ body {
     .nav-desktop {
         display: none;
     }
-    
+
     .mobile-menu-btn {
-        display: block;
+        display: inline-flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
     }
-    
+
     .mobile-menu.active {
         display: flex;
     }
@@ -371,15 +399,15 @@ body {
     .hero-title {
         font-size: 4rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1.25rem;
     }
-    
+
     .hero-description {
         font-size: 1.125rem;
     }
-    
+
     .hero-logo-img {
         width: 6rem;
         height: 6rem;
@@ -387,7 +415,7 @@ body {
     }
 
     .hero-buttons {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -842,7 +870,7 @@ body {
     .contact-title {
         font-size: 2rem;
     }
-    
+
     .contact-description {
         font-size: 1.125rem;
     }
@@ -939,11 +967,11 @@ body {
     .section {
         padding: 3rem 0;
     }
-    
+
     .container {
         padding: 0 1rem;
     }
-    
+
     .hero-section {
         min-height: 90vh;
     }

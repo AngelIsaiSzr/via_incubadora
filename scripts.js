@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeScrollEffects();
 });
 
-// Navigation functionality
+// ...existing code...
 function initializeNavigation() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -15,12 +15,7 @@ function initializeNavigation() {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', function () {
             mobileMenu.classList.toggle('active');
-
-            // Animate hamburger
-            const hamburger = mobileMenuBtn.querySelector('.hamburger');
-            hamburger.style.transform = mobileMenu.classList.contains('active')
-                ? 'rotate(45deg)'
-                : 'rotate(0deg)';
+            mobileMenuBtn.classList.toggle('active'); // <-- activa animación hamburguesa
         });
 
         // Close mobile menu when clicking on links
@@ -28,11 +23,11 @@ function initializeNavigation() {
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', function () {
                 mobileMenu.classList.remove('active');
-                const hamburger = mobileMenuBtn.querySelector('.hamburger');
-                hamburger.style.transform = 'rotate(0deg)';
+                mobileMenuBtn.classList.remove('active'); // <-- desactiva animación hamburguesa
             });
         });
     }
+
 
     // Navigation background on scroll
     if (navigation) {
