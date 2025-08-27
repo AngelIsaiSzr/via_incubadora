@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VÍA - Visión, Impacto y Acción | Incubadora Social</title>
+    <meta name="description"
+        content="VÍA es una incubadora gratuita de proyectos con impacto social. Acompañamos emprendedores visionarios que buscan transformar el mundo con asesorías, mentoría y apoyo técnico sin costo.">
+    <meta name="author" content="VÍA - Angel Salazar & Yamileth Martínez">
+    <meta name="keywords"
+        content="incubadora social, emprendimiento social, proyectos sociales, impacto social, asesoría gratuita, mentoría, VÍA">
+
+    <meta property="og:title" content="VÍA - Visión, Impacto y Acción | Incubadora Social">
+    <meta property="og:description"
+        content="Incubadora gratuita de proyectos sociales. Un camino real para transformar el mundo con asesorías, mentoría y apoyo técnico sin costo.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/via-logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="VÍA - Visión, Impacto y Acción">
+    <meta name="twitter:description"
+        content="Incubadora gratuita de proyectos sociales que transforma ideas en realidades de impacto.">
+    <meta name="twitter:image" content="assets/via-logo.png">
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/via-logo.png">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav id="navigation" class="nav-fixed">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <img src="assets/via-logo.png" alt="VÍA" class="logo-img">
+                    <span class="logo-text">VÍA</span>
+                </div>
+
+                <div class="nav-desktop">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#equipo" class="nav-link">Equipo</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                    <button class="btn btn-primary btn-sm apply-button">Aplicar Ahora</button>
+                </div>
+
+                <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="mobile-menu">
+                <a href="#inicio" class="mobile-nav-link">Inicio</a>
+                <a href="#sobre-nosotros" class="mobile-nav-link">Sobre Nosotros</a>
+                <a href="#servicios" class="mobile-nav-link">Servicios</a>
+                <a href="#equipo" class="mobile-nav-link">Equipo</a>
+                <a href="#contacto" class="mobile-nav-link">Contacto</a>
+                <button class="btn btn-primary btn-sm apply-button">Aplicar Ahora</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-bg-decoration"></div>
+        <div class="hero-circle-1"></div>
+        <div class="hero-circle-2"></div>
+
+        <div class="container hero-content">
+            <div class="hero-logo">
+                <img src="assets/via-logo-main.png" alt="VÍA Logo" class="hero-logo-img">
+            </div>
+
+            <h1 class="hero-title">VÍA</h1>
+            <h2 class="hero-subtitle">Visión, Impacto y Acción</h2>
+            <p class="hero-description">
+                Un camino real para transformar el mundo. Incubadora gratuita de proyectos con impacto social que guía,
+                acompaña y fortalece a emprendedores visionarios.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="btn btn-hero-primary btn-lg" onclick="scrollToSection('contacto')">
+                    Aplicar Ahora
+                </button>
+                <button class="btn btn-hero-secondary btn-lg" onclick="scrollToSection('sobre-nosotros')">
+                    Conoce Más
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Qué es VÍA?</h2>
+                <p class="section-subtitle">
+                    Una incubadora de proyectos con impacto social, creada para guiar, acompañar y fortalecer a personas
+                    emprendedoras que sueñan con cambiar su entorno.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="about-text">
+                        VÍA es un espacio <strong>gratuito y accesible</strong>, que brinda asesorías, mentoría
+                        personalizada,
+                        apoyo técnico y, en algunos casos, respaldo económico o publicitario a iniciativas sociales
+                        emergentes.
+                    </p>
+                    <p class="about-text">
+                        A diferencia de otras incubadoras que cobran por sus servicios, VÍA nace con un enfoque
+                        totalmente
+                        <strong>solidario, humano y sin fines de lucro</strong>, porque creemos que todas las ideas
+                        merecen
+                        una oportunidad para florecer, sin importar los recursos económicos.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">100% Gratuito</span>
+                        <span class="tag">Sin Fines de Lucro</span>
+                        <span class="tag">Modalidad Virtual</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <h3 class="card-title">Nuestra Historia</h3>
+                        <p class="card-text">
+                            VÍA es cofundada por <strong>Angel Salazar</strong> y <strong>Yamileth Martínez</strong>,
+                            jóvenes visionarios comprometidos con la innovación y el impacto social.
+                        </p>
+                        <p class="card-text">
+                            Inspirados por la necesidad de crear espacios reales de transformación, decidieron fundar
+                            una incubadora completamente gratuita, nacida del amor, la solidaridad y la acción concreta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Cómo Funciona VÍA?</h2>
+                <p class="section-subtitle">
+                    Ofrecemos apoyo integral y personalizado para que tu proyecto social se convierta en realidad.
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Asesorías Gratuitas</h3>
+                    <p class="feature-description">
+                        Desarrollo de proyectos, identidad de marca, estrategia, impacto social, prototipado y
+                        comunicación.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Mentoría Personalizada</h3>
+                    <p class="feature-description">
+                        Acompañamiento directo con experiencia en desarrollo web, educación tecnológica y liderazgo.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Billete">
+                            <!-- Marco del billete -->
+                            <rect x="3" y="6" width="18" height="12" rx="2" ry="2" />
+                            <!-- Detalles internos -->
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M6 8h.01M6 16h.01M18 8h.01M18 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Apoyo Económico</h3>
+                    <p class="feature-description">
+                        En casos especiales y necesarios, brindamos respaldo financiero gracias al apoyo de EcoMundo.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Difusión y Marketing</h3>
+                    <p class="feature-description">
+                        Apoyo publicitario continuo a través de nuestras plataformas, proyectos y marcas aliadas.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Modalidad Virtual</h3>
+                    <p class="feature-description">
+                        Accesible desde cualquier lugar, rompiendo barreras geográficas y económicas.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Red de Apoyo</h3>
+                    <p class="feature-description">
+                        Conexión con otros emprendedores y organizaciones comprometidas con el cambio social.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valores -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Valores</h2>
+                <p class="section-subtitle">
+                    Los principios que guían cada una de nuestras acciones y definen nuestra identidad.
+                </p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Solidaridad</h3>
+                    <p class="value-description">
+                        Ayudar sin esperar nada a cambio, creando un mundo más colaborativo.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Puerta">
+                            <!-- Marco -->
+                            <rect x="6" y="3" width="12" height="18" rx="1" ry="1" />
+                            <!-- Manija -->
+                            <circle cx="15" cy="12" r="0.8" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Accesibilidad</h3>
+                    <p class="value-description">
+                        Asesorías sin costo, sin barreras, para que todos tengan oportunidades.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Compromiso Social</h3>
+                    <p class="value-description">
+                        Todas las ideas deben tener un propósito que beneficie a otros.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path d="M12 2a7 7 0 0 0-4 12c.5.7 1 1.4 1 2v1h6v-1c0-.6.5-1.3 1-2a7 7 0 0 0-4-12z" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Innovación</h3>
+                    <p class="value-description">
+                        Fomentar soluciones creativas con impacto real y sostenible.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Carita feliz">
+                            <circle cx="12" cy="12" r="9" />
+                            <path d="M9 10h.01M15 10h.01" />
+                            <path d="M8 14c1.5 1.5 6.5 1.5 8 0" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Empatía</h3>
+                    <p class="value-description">
+                        Escuchamos y acompañamos con el corazón, entendiendo cada necesidad.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" />
+                            <path
+                                d="M12.56 6.6A10.97 10.97 0 0 1 14 3.02c.5 2.5 2.04 4.6 4.14 5.93a10.97 10.97 0 0 1 5.84 6.05 8 8 0 0 1-4.9 8.39A9.09 9.09 0 0 1 16 24a8.99 8.99 0 0 1-3.64.69" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Sostenibilidad</h3>
+                    <p class="value-description">
+                        Promovemos ideas que respeten al planeta y a las personas.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Equidad</h3>
+                    <p class="value-description">
+                        Todos tienen un lugar en VÍA, sin importar origen o condición.
+                    </p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 12l2 2 4-4" />
+                            <circle cx="21" cy="12" r="1" />
+                            <path d="M21 12c0-5.52-4.48-10-10-10S1 6.48 1 12s4.48 10 10 10 10-4.48 10-10" />
+                        </svg>
+                    </div>
+                    <h3 class="value-title">Transparencia</h3>
+                    <p class="value-description">
+                        Actuamos con claridad y honestidad, generando confianza en cada paso.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Quiénes Lideran VÍA?</h2>
+                <p class="section-subtitle">
+                    Conoce a los cofundadores que hacen posible este sueño de transformación social.
+                </p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-content">
+                        <h3 class="team-name">Angel Isaí Moreno Salazar</h3>
+                        <p class="team-role">Cofundador & CTO</p>
+                        <p class="team-description">
+                            Fundador de Web Code Academy, Líder del Mañana, Full Stack Developer autodidacta y diseñador
+                            de proyectos sociales, ambientales y educativos. Brinda asesorías técnicas y estratégicas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-content">
+                        <h3 class="team-name">Luisa Yamileth Martínez Leonides</h3>
+                        <p class="team-role">Cofundadora & Directora de Operaciones</p>
+                        <p class="team-description">
+                            Emprendedora social comprometida con la economía circular y Directora de Operaciones de Web
+                            Code Academy. Su emprendimiento EcoMundo aporta el financiamiento para VÍA.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ODS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contribución a los ODS</h2>
+                <p class="section-subtitle">
+                    VÍA contribuye activamente a los Objetivos de Desarrollo Sostenible de la ONU.
+                </p>
+            </div>
+
+            <div class="ods-grid">
+                <div class="ods-card">
+                    <div class="ods-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        <h3>ODS 4</h3>
+                    </div>
+                    <h4>Educación de Calidad</h4>
+                    <p>
+                        Capacitamos y guiamos a emprendedores que no tienen acceso a formación estructurada.
+                    </p>
+                </div>
+
+                <div class="ods-card">
+                    <div class="ods-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        <h3>ODS 8</h3>
+                    </div>
+                    <h4>Trabajo Decente</h4>
+                    <p>
+                        Apoyamos proyectos que generan empleo digno y autoempleo sostenible.
+                    </p>
+                </div>
+
+                <div class="ods-card">
+                    <div class="ods-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                        </svg>
+                        <h3>ODS 9</h3>
+                    </div>
+                    <h4>Innovación</h4>
+                    <p>
+                        Fomentamos ideas que resuelven problemas reales con soluciones novedosas.
+                    </p>
+                </div>
+
+                <div class="ods-card">
+                    <div class="ods-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                        <h3>ODS 10</h3>
+                    </div>
+                    <h4>Reducción de Desigualdades</h4>
+                    <p>
+                        Ofrecemos asesorías gratuitas, rompiendo barreras económicas.
+                    </p>
+                </div>
+
+                <div class="ods-card">
+                    <div class="ods-header">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+                        </svg>
+                        <h3>ODS 17</h3>
+                    </div>
+                    <h4>Alianzas</h4>
+                    <p>
+                        Unimos a EcoMundo, Web Code Academy y otros aliados por el bien común.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Público Objetivo -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Para Quién es VÍA?</h2>
+                <p class="section-subtitle">
+                    Nuestra incubadora está diseñada para apoyar a diferentes tipos de emprendedores sociales.
+                </p>
+            </div>
+
+            <div class="target-grid">
+                <div class="target-card">
+                    <div class="target-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Jóvenes Emprendedores</h3>
+                    <p>Con ideas sociales o ambientales transformadoras</p>
+                </div>
+
+                <div class="target-card">
+                    <div class="target-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 12l2 2 4-4" />
+                            <circle cx="21" cy="12" r="1" />
+                            <path d="M21 12c0-5.52-4.48-10-10-10S1 6.48 1 12s4.48 10 10 10 10-4.48 10-10" />
+                        </svg>
+                    </div>
+                    <h3>Proyectos Nacientes</h3>
+                    <p>Que buscan asesoría gratuita y acompañamiento</p>
+                </div>
+
+                <div class="target-card">
+                    <div class="target-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                    </div>
+                    <h3>Estudiantes y Líderes</h3>
+                    <p>Comunitarios con ganas de generar impacto</p>
+                </div>
+
+                <div class="target-card">
+                    <div class="target-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h3>Emprendimientos</h3>
+                    <p>Que quieren profesionalizarse o escalar</p>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section-contact">
+        <div class="container contact-content">
+            <h2 class="contact-title">
+                ¿Listo para Transformar el Mundo?
+            </h2>
+            <p class="contact-description">
+                Si tienes una idea con propósito social, estamos aquí para acompañarte en este camino de transformación.
+            </p>
+            <div class="contact-buttons">
+                <button class="btn btn-contact-primary btn-lg apply-button">
+                    Aplicar a VÍA
+                </button>
+                <button class="btn btn-contact-secondary btn-lg">
+                    Conoce Más
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/via-logo.png" alt="VÍA" class="footer-logo-img">
+                        <span class="footer-logo-text">VÍA</span>
+                    </div>
+                    <p class="footer-description">
+                        Visión, Impacto y Acción. Un camino real para transformar el mundo.
+                    </p>
+                    <p class="footer-tagline">
+                        Incubadora gratuita de proyectos con impacto social.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <a href="#inicio" class="footer-link">Inicio</a>
+                    <a href="#sobre-nosotros" class="footer-link">Sobre Nosotros</a>
+                    <a href="#servicios" class="footer-link">Servicios</a>
+                    <a href="#equipo" class="footer-link">Equipo</a>
+                </div>
+
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p class="footer-contact-text">
+                        ¿Tienes una idea con impacto social?
+                    </p>
+                    <p class="footer-contact-text">
+                        Contáctanos y comencemos este camino de transformación juntos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 VÍA - Visión, Impacto y Acción. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
