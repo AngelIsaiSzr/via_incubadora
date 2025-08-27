@@ -385,6 +385,10 @@ body {
         height: 6rem;
         margin-top: 6rem;
     }
+
+    .hero-buttons {
+        margin-bottom: 2rem;
+    }
 }
 
 /* Sections */
