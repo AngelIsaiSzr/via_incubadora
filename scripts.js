@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeScrollEffects();
 });
 
-// ...existing code...
+// Navigation functionality
 function initializeNavigation() {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -15,19 +15,30 @@ function initializeNavigation() {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', function () {
             mobileMenu.classList.toggle('active');
-            mobileMenuBtn.classList.toggle('active'); // <-- activa animación hamburguesa
+            mobileMenuBtn.classList.toggle('active');
         });
 
-        // Close mobile menu when clicking on links
+        // Close mobile menu when clicking on links and wait for close animation before scrolling
         const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
         mobileNavLinks.forEach(link => {
-            link.addEventListener('click', function () {
-                mobileMenu.classList.remove('active');
-                mobileMenuBtn.classList.remove('active'); // <-- desactiva animación hamburguesa
+            link.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    e.preventDefault();
+
+                    // close menu first so layout reflows
+                    mobileMenu.classList.remove('active');
+                    mobileMenuBtn.classList.remove('active');
+
+                    // wait for the menu close transition to finish (match CSS ~360ms)
+                    const wait = 420;
+                    setTimeout(() => {
+                        scrollToSection(href.substring(1));
+                    }, wait);
+                }
             });
         });
     }
-
 
     // Navigation background on scroll
     if (navigation) {
@@ -45,33 +56,45 @@ function initializeNavigation() {
 
 // Smooth scrolling functionality
 function initializeSmoothScrolling() {
-    // Handle all navigation links
-    const navLinks = document.querySelectorAll('a[href^="#"], .nav-link, .mobile-nav-link, .footer-link');
+    // Only handle actual anchor links (we handle mobile links separately above)
+    const navLinks = document.querySelectorAll('a[href^="#"]');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
 
-            if (targetId && targetId.startsWith('#')) {
+            // If it's an in-page anchor and not a mobile link (mobile handled above)
+            if (targetId && targetId.startsWith('#') && !this.classList.contains('mobile-nav-link')) {
+                e.preventDefault();
                 scrollToSection(targetId.substring(1));
             }
         });
     });
 }
 
-// Scroll to section function
+// Scroll to section function (more precise and accounts for fixed nav + small gap)
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
-    if (element) {
-        const navHeight = document.getElementById('navigation').offsetHeight;
-        const elementPosition = element.offsetTop - navHeight - 20;
+    if (!element) return;
 
-        window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-        });
-    }
+    const nav = document.getElementById('navigation');
+    const navHeight = nav ? nav.offsetHeight : 0;
+
+    // Compute exact document position of the element
+    const elementTop = element.getBoundingClientRect().top + window.scrollY;
+
+    // Extra spacing so section isn't glued to the nav
+    const extraSpacing = 0;
+
+    const targetPosition = Math.max(elementTop - navHeight - extraSpacing, 0);
+
+    // focus for accessibility
+    element.setAttribute('tabindex', '-1');
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+    });
+    element.focus({ preventScroll: true });
 }
 
 // Scroll effects and animations
